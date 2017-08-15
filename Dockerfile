@@ -24,3 +24,5 @@ RUN	apk --no-cache upgrade &&\
 	rm -rf sqlcheck &&\
 	apk --no-cache del --purge cmake curl gcc g++ git make musl-dev &&\
 	sqlcheck --help
+
+ENTRYPOINT ["sqlcheck"]
