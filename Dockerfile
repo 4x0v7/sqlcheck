@@ -13,7 +13,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.description="Alpine based SQLCheck image"
 
 RUN	apk --no-cache upgrade &&\
-	apk --no-cache add cmake curl gcc g++ git make musl-dev &&\
+	apk --no-cache add cmake curl gcc g++ git libstdc++ make musl-dev &&\
 	git clone --recursive https://github.com/jarulraj/sqlcheck.git &&\
 	cd sqlcheck &&\
 	./bootstrap &&\
