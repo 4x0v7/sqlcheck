@@ -10,7 +10,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.schema-version="1.0.0-rc.1" \
       org.label-schema.version=$SQLCHECK_VERSION \
-      org.label-schema.description="Alpine based SQLCheck image"
+      org.label-schema.description="SQLCheck: Automatically identify anti-patterns in SQL queries"
 
 RUN	apk --no-cache upgrade &&\
 	apk --no-cache add cmake curl gcc g++ git libstdc++ make musl-dev &&\
