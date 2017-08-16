@@ -20,6 +20,7 @@ RUN	apk --no-cache upgrade &&\
 	cd build &&\
 	cmake -DCMAKE_BUILD_TYPE=RELEASE .. &&\
 	make &&\
+	make check &&\
 	make install &&\
 	rm -rf sqlcheck &&\
 	apk --no-cache del --purge cmake curl gcc g++ git make musl-dev &&\
