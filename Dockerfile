@@ -13,7 +13,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.description="SQLCheck: Automatically identify anti-patterns in SQL queries"
 
 RUN	apk --no-cache upgrade &&\
-	apk --no-cache add cmake curl gcc g++ git libstdc++ make musl-dev &&\
+	apk --no-cache add cmake gcc g++ git libstdc++ make musl-dev &&\
 	git clone --recursive https://github.com/jarulraj/sqlcheck.git &&\
 	cd sqlcheck &&\
 	./bootstrap &&\
@@ -23,7 +23,7 @@ RUN	apk --no-cache upgrade &&\
 	make check &&\
 	make install &&\
 	rm -rf sqlcheck &&\
-	apk --no-cache del --purge cmake curl gcc g++ git make musl-dev &&\
+	apk --no-cache del --purge cmake gcc g++ git make musl-dev &&\
 	sqlcheck -h
 
 ENTRYPOINT ["sqlcheck"]
