@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:latest
 
 ENV SQLCHECK_VERSION=1.0.5
 
